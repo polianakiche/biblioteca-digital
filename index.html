@@ -1,1 +1,71 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Biblioteca Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pagina">
+
+        <header class="cabecalho">
+            <h1>Minha Biblioteca</h1>
+            <p>Uma coleção de histórias, ideias e pensamentos.</p>
+        </header>
+
+        <main class="conteudo">
+
+            <section class="biblioteca">
+                <div class="estante">
+
+                    <div class="prateleira">
+                        <div class="livros" id="prateleira-1"></div>
+                    </div>
+
+                    <div class="prateleira">
+                        <div class="livros" id="prateleira-2"></div>
+                    </div>
+
+                    <div class="prateleira">
+                        <div class="livros" id="prateleira-3"></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <aside class="painel-lista">
+                <div class="cabecalho-lista">
+                    <h2>Minha Lista de Leitura</h2>
+                    <p>Os livros que quero ler</p>
+                </div>
+
+                <div class="decoracao">✦ ✦ ✦</div>
+
+                <div id="lista-leitura" class="lista-leitura">
+                    <p class="lista-vazia">
+                        Sua lista de leitura está vazia...
+                    </p>
+                </div>
+
+                <div class="rodape-lista">
+                    <span id="contador">0 livros selecionados</span>
+                </div>
+            </aside>
+
+        </main>
+
+        <footer class="rodape">
+            <p>Uma biblioteca pessoal — feita com amor pela literatura.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
