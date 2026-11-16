@@ -1,1 +1,255 @@
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #211912;
+    color: #eadcc5;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.pagina {
+    min-height: 100vh;
+    padding: 35px;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.cabecalho h1 {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #e9d8ba;
+}
+
+.cabecalho p {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #bba98d;
+    font-style: italic;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: auto;
+    align-items: stretch;
+}
+
+.biblioteca {
+    background:
+        linear-gradient(rgba(30, 17, 9, 0.25), rgba(30, 17, 9, 0.4)),
+        repeating-linear-gradient(
+            90deg,
+            #593a25 0px,
+            #704b30 35px,
+            #593a25 70px
+        );
+    border: 12px solid #3b2618;
+    padding: 25px;
+    box-shadow: 0 10px 25px #0008;
+}
+
+.estante {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.prateleira {
+    min-height: 220px;
+    padding: 15px 10px 20px;
+    border-bottom: 18px solid #3b2416;
+    box-shadow: 0 8px 7px -5px #000;
+}
+
+.livros {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    align-items: end;
+}
+
+.livro {
+    width: 100%;
+    aspect-ratio: 0.66;
+    border: none;
+    padding: 0;
+    background: #100d0a;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 3px 4px 7px #0009;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.livro:hover {
+    transform: translateY(-9px);
+    box-shadow: 4px 9px 12px #000b;
+}
+
+.livro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.painel-lista {
+    background: #e8dcc6;
+    color: #34271c;
+    padding: 30px 25px;
+    min-height: 500px;
+    box-shadow: 0 10px 25px #0007;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho-lista {
+    text-align: center;
+    border-bottom: 1px solid #b6a48a;
+    padding-bottom: 20px;
+}
+
+.cabecalho-lista h2 {
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.cabecalho-lista p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.decoracao {
+    text-align: center;
+    margin: 20px 0;
+    color: #9b7951;
+    letter-spacing: 8px;
+}
+
+.lista-leitura {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.lista-vazia {
+    text-align: center;
+    color: #8b7a64;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+.rodape-lista {
+    border-top: 1px solid #b6a48a;
+    padding-top: 18px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.rodape {
+    text-align: center;
+    margin-top: 30px;
+    color: #bba98d;
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .pagina {
+        padding: 15px;
+    }
+
+    .biblioteca {
+        padding: 12px;
+    }
+
+    .livros {
+        gap: 8px;
+    }
+
+    .cabecalho h1 {
+        font-size: 32px;
+    }
+}
+
+/* Capas provisórias */
+.capa-provisoria {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 12px 8px;
+    background: #101010;
+    color: #e8dcc6;
+    border: 1px solid #6c5942;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    font-family: Georgia, serif;
+    font-size: 13px;
+}
+
+.capa-provisoria small {
+    font-size: 9px;
+    color: #b9a78c;
+}
+
+.livro.selecionado {
+    outline: 3px solid #c6a46b;
+    outline-offset: 4px;
+}
+
+.item-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #cbbda6;
+    color: #33291f;
+}
+
+.info-livro {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-livro strong {
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+.info-livro small {
+    font-size: 12px;
+    color: #776956;
+}
+
+.remover-livro {
+    border: none;
+    background: transparent;
+    color: #795c43;
+    font-size: 23px;
+    cursor: pointer;
+}
+
